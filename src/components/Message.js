@@ -10,12 +10,13 @@ class Message extends React.Component {
         }
     }
 
-    changeMessage(){
+    changeMessage() {
         this.setState({
             message: 'Thanks for subscribing',
             buttonText: 'Subscribed'
         })
     }
+
     render() {
         return (
             <div>
