@@ -9,8 +9,8 @@ class ParentComponent extends React.Component {
         }
         this.greetParent = this.greetParent.bind(this)
     }
-    greetParent(){
-        alert(`hello ${this.state.parentName}`)
+    greetParent(childName){
+        alert(`hello ${this.state.parentName} from ${childName}`)
     }
 
     render() {
