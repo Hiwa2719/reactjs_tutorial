@@ -18,7 +18,9 @@ class EventBind extends React.Component{
         return(
             <div>
                 <div>{this.state.message}</div>
-                <button onClick={this.changeMessage.bind(this)}>Click</button>
+                {/*<button onClick={this.changeMessage.bind(this)}>Click</button>*/}
+                <button onClick={() => this.changeMessage()}>Click</button>
+
             </div>
         )
     }
