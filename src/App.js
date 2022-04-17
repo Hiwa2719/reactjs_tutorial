@@ -7,12 +7,15 @@ import Message from './components/Message'
 import Counter from './components/counter'
 import FunctionClick from "./components/FunctionClick";
 import ClassClick from "./components/ClassClick";
+import EventBind from './components/EventBind'
+
 
 function App() {
   return (
     <div className="App">
-        <FunctionClick/>
-        <ClassClick/>
+        <EventBind/>
+        {/*<FunctionClick/>*/}
+        {/*<ClassClick/>*/}
         {/*<Counter/>*/}
         {/*<Message/>*/}
         {/*<Greet name={'hiwa'} heroName={'Batman'}><p>this is props</p></Greet>*/}
