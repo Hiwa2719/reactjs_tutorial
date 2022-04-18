@@ -17,7 +17,7 @@ function NameList() {
             skill: 'Python'
         }
     ]
-    const namesList = persons.map(person => <Person person={person}/>)
+    const namesList = persons.map(person => <Person key={person.id} person={person}/>)
     return (
         <div>
             {namesList}
