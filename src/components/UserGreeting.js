@@ -10,13 +10,10 @@ class UserGreeting extends React.Component {
     }
 
     render() {
-        let message
-        if(this.state.isLoggedIn){
-            message = <div>Welcome Hiwa</div>
-        }else{
-            message = <div>Welcome Guest</div>
-        }
-        return <div>{message}</div>
+        return this.state.isLoggedIn && <div>Welcome Hiwa</div>  //this approach works only when we have one side
+        // return this.state.isLoggedIn ?
+        //     <div>Welcome Hiwa</div> :
+        //     <div>Welcome Guest</div>
     }
 }
 
