@@ -1,15 +1,21 @@
 import React from "react";
-import button from "bootstrap/js/src/button";
 
 class RefsDemo extends React.Component {
     constructor(props) {
         super();
         this.inputRef = React.createRef()
+        this.cbRef = null
+        this.setCBRef = element => {
+            this.cbRef = element
+        }
     }
 
     componentDidMount() {
-        this.inputRef.current.focus()
-        console.log(this.inputRef)
+        if (this.cbRef){
+            this.cbRef.focus()
+        }
+        // this.inputRef.current.focus()
+        // console.log(this.inputRef)
     }
 
     clickHandler = () => {
@@ -19,6 +25,7 @@ class RefsDemo extends React.Component {
         return (
             <>
                 <input type="text" ref={this.inputRef}/>
+                <input type="text" ref={this.setCBRef}/>
                 <button onClick={this.clickHandler}>click</button>
             </>
         )
