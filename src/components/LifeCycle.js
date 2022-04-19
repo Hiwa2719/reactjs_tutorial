@@ -10,7 +10,7 @@ class LifeCycle extends React.Component {
         console.log('LifeCycle constructor')
     }
 
-    static getDerivedStateFromProps(props, state){
+    static getDerivedStateFromProps(props, state) {
         console.log('lifeCycle getDerivedStateFromProps')
         return null
     }
@@ -19,10 +19,32 @@ class LifeCycle extends React.Component {
         console.log('lifecycle componentDidMount')
     }
 
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        console.log('LifeCycle shouldComponentUpdate')
+        return true
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('LifeCycle getSnapshotBeforeUpdate')
+        return null
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('lifecycle componentDidUpdate')
+    }
+    changeState = event => {
+        this.setState({
+            name: 'karen'
+        })
+    }
     render() {
         console.log('lifecycle render')
         return (
-            <LifeCycleB/>
+            <div>
+                <div>LifeCycle</div>
+                <button onClick={this.changeState}>Change State</button>
+                <LifeCycleB/>
+            </div>
         )
     }
 }
