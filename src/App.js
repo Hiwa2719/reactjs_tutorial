@@ -3,11 +3,14 @@ import './App.css';
 import Form from './components/Form'
 import LifeCycle from "./components/LifeCycle";
 import FragmentsDemo from "./components/FragmentsDemo";
+import Table from './components/Table'
+
 
 function App() {
   return (
     <div className="App">
-        <FragmentsDemo/>
+        <Table/>
+        {/*<FragmentsDemo/>*/}
         {/*<LifeCycle/>*/}
         {/*<Form/>*/}
     </div>
