@@ -1,14 +1,11 @@
 import './App.css';
-import C from './components/C'
-import {UserProvider} from "./components/userContext";
+import PostList from "./components/PostList";
 
 
 function App() {
     return (
         <div className="App">
-            {/*<UserProvider value='Hiwa'>*/}
-                <C/>
-            {/*</UserProvider>*/}
+            <PostList/>
         </div>
     );
 }
