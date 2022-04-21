@@ -20,8 +20,13 @@ class PostForm extends React.Component {
 
     submitHandler = e => {
         e.preventDefault()
+        const data = {
+            'userId': this.state.userId,
+            'title': this.state.title,
+            'body': this.state.body
+        }
         console.log(this.state)
-        axios.post('https://jsonplaceholder.typicode.com/posts')
+        axios.post('https://jsonplaceholder.typicode.com/posts', data)
             .then(response => {
                 console.log('success')
                 console.log(response)
